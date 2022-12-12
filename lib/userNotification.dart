@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceryapp/fl_chart.dart';
 import 'package:groceryapp/homepage.dart';
+import 'package:groceryapp/pages/home_page.dart';
 import 'package:groceryapp/userActivity.dart';
 
 void main() {
@@ -46,7 +47,7 @@ class UserNotification extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       CircleAvatar(
-                        backgroundColor: Colors.red.shade300,
+                        backgroundColor: Colors.grey.shade300,
                         minRadius: 35.0,
                         child: Icon(
                           Icons.notification_add,
@@ -54,7 +55,7 @@ class UserNotification extends StatelessWidget {
                         ),
                       ),
                       CircleAvatar(
-                        backgroundColor: Colors.white70,
+                        backgroundColor: Colors.grey.shade300,
                         minRadius: 60.0,
                         child: CircleAvatar(
                           radius: 50.0,
@@ -65,7 +66,7 @@ class UserNotification extends StatelessWidget {
                       //add Icon Button
 
                       CircleAvatar(
-                        backgroundColor: Colors.red.shade300,
+                        backgroundColor: Colors.grey.shade300,
                         minRadius: 35.0,
                         child: Icon(
                           Icons.shop_2_rounded,
@@ -141,7 +142,7 @@ class UserNotification extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomePageSK(),
+                            builder: (context) => HomePage(),
                           ));
                     },
                     child: Padding(

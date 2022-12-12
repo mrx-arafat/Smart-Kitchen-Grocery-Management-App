@@ -58,7 +58,7 @@ class CartPage extends StatelessWidget {
                               style: const TextStyle(fontSize: 18),
                             ),
                             subtitle: Text(
-                              '\$' + value.cartItems[index][1],
+                              'BDT' + value.cartItems[index][1],
                               style: const TextStyle(fontSize: 12),
                             ),
                             trailing: IconButton(
@@ -82,7 +82,7 @@ class CartPage extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    color: Colors.green,
+                    color: Colors.orange,
                   ),
                   padding: const EdgeInsets.all(24),
                   child: Row(
@@ -93,17 +93,18 @@ class CartPage extends StatelessWidget {
                         children: [
                           Text(
                             'Total Price',
-                            style: TextStyle(color: Colors.green[200]),
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 26, 27, 26)),
                           ),
 
                           const SizedBox(height: 8),
                           // total price
                           Text(
-                            '\$${value.calculateTotal()}',
+                            'BDT ${value.calculateTotal()}',
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                              color: Color.fromARGB(255, 57, 57, 57),
                             ),
                           ),
                         ],
@@ -112,7 +113,8 @@ class CartPage extends StatelessWidget {
                       // pay now
                       Container(
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.green.shade200),
+                          border: Border.all(
+                              color: Color.fromARGB(255, 31, 30, 30)),
                           borderRadius: BorderRadius.circular(28),
                         ),
                         padding: const EdgeInsets.all(12),
@@ -120,12 +122,13 @@ class CartPage extends StatelessWidget {
                           children: const [
                             Text(
                               'Pay Now',
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 30, 30, 30)),
                             ),
                             Icon(
                               Icons.arrow_forward_ios,
                               size: 16,
-                              color: Colors.white,
+                              color: Color.fromARGB(255, 33, 32, 32),
                             ),
                           ],
                         ),

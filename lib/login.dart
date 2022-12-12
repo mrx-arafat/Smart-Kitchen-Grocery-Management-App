@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:groceryapp/signup.dart';
+import 'package:groceryapp/userProfile.dart';
 import 'signup.dart';
 
 void main() {
@@ -46,7 +47,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: const Text(
                   'Login Here',
                   style: TextStyle(
-                      color: Colors.orange,
+                      color: Colors.grey,
                       fontWeight: FontWeight.w500,
                       fontSize: 25),
                 )),
@@ -88,7 +89,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => SignUp(),
+                          builder: (context) => UserProfile(),
                         ));
                   },
                 )),
@@ -99,7 +100,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   child: const Text(
                     'Sign Up',
                     style: TextStyle(
-                        fontSize: 20, color: Color.fromARGB(197, 255, 136, 0)),
+                        fontSize: 20, color: Color.fromARGB(241, 239, 138, 22)),
                   ),
                   onPressed: () {
                     Navigator.push(

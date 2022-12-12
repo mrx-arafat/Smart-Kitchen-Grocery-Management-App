@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.only(left: 24.0),
           child: Icon(
             Icons.location_on,
-            color: Colors.grey[700],
+            color: Colors.orange[700],
           ),
         ),
         title: Text(
@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
               ),
               child: Icon(
                 Icons.person,
-                color: Colors.grey,
+                color: Colors.orange,
               ),
             ),
           ),
@@ -71,7 +71,9 @@ class _HomePageState extends State<HomePage> {
           // good morning bro
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.0),
-            child: Text('Good morning,'),
+            child: Text(
+              'Good morning,',
+            ),
           ),
 
           const SizedBox(height: 4),
@@ -82,9 +84,9 @@ class _HomePageState extends State<HomePage> {
             child: Text(
               "Let's order fresh items for you",
               style: GoogleFonts.notoSerif(
-                fontSize: 36,
-                fontWeight: FontWeight.bold,
-              ),
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(241, 239, 138, 22)),
             ),
           ),
 

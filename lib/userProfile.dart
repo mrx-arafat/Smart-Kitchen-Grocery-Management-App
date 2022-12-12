@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceryapp/fl_chart.dart';
 import 'package:groceryapp/homepage.dart';
+import 'package:groceryapp/pages/home_page.dart';
 import 'package:groceryapp/userActivity.dart';
 import 'package:groceryapp/userNotification.dart';
 
@@ -19,7 +20,7 @@ class UserProfile extends StatelessWidget {
       title: 'Smart Kitchen',
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: Color.fromARGB(250, 241, 93, 40),
           title: Center(
             child: const Text('Smart Kitchen'),
           ),
@@ -31,7 +32,7 @@ class UserProfile extends StatelessWidget {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color.fromARGB(255, 212, 66, 9),
+                    Color.fromARGB(255, 236, 115, 67),
                     Colors.deepOrange.shade300
                   ],
                   begin: Alignment.centerLeft,
@@ -47,15 +48,16 @@ class UserProfile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
                       CircleAvatar(
-                        backgroundColor: Colors.red.shade300,
+                        backgroundColor: Colors.grey.shade300,
                         minRadius: 35.0,
                         child: Icon(
                           Icons.notification_add,
                           size: 30.0,
                         ),
                       ),
+
                       CircleAvatar(
-                        backgroundColor: Colors.white70,
+                        backgroundColor: Colors.grey.shade300,
                         minRadius: 60.0,
                         child: CircleAvatar(
                           radius: 50.0,
@@ -66,7 +68,7 @@ class UserProfile extends StatelessWidget {
                       //add Icon Button
 
                       CircleAvatar(
-                        backgroundColor: Colors.red.shade300,
+                        backgroundColor: Colors.grey.shade300,
                         minRadius: 35.0,
                         child: Icon(
                           Icons.shop_2_rounded,
@@ -191,7 +193,7 @@ class UserProfile extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => UserNotification(),
+                            builder: (context) => HomePage(),
                           ));
                     },
                     child: Padding(

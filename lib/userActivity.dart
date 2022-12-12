@@ -19,7 +19,7 @@ class userActivity extends StatelessWidget {
         ),
         body: Column(
           children: [
-            Image.asset("assets/images/home_img.png"),
+            Image.asset("./images/bot.png"),
             // ignore: prefer_ _ ructors, prefer_const_constructors
 
             InkWell(

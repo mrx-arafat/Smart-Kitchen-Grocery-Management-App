@@ -46,7 +46,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child: const Text(
                   'Sign Up',
                   style: TextStyle(
-                      color: Colors.orange,
+                      color: Color.fromARGB(255, 105, 101, 94),
                       fontWeight: FontWeight.w500,
                       fontSize: 25),
                 )),

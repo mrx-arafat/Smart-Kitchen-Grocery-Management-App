@@ -52,7 +52,7 @@ class GroceryItemTile extends StatelessWidget {
               onPressed: onPressed,
               color: color,
               child: Text(
-                '\$' + itemPrice,
+                'BDT' + itemPrice,
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
