@@ -8,6 +8,7 @@ import 'package:groceryapp/pages/home_page.dart';
 import 'package:groceryapp/userActivity.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:groceryapp/userNotification.dart';
+import 'package:groceryapp/userProfile.dart';
 
 void main() {
   runApp(const Successfull());
@@ -100,7 +101,7 @@ class Successfull extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Balance: 20,000 BDT',
+                    'Balance: 19,895 BDT',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
@@ -213,7 +214,7 @@ class Successfull extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => HomePageSK(),
+                                builder: (context) => UserProfile(),
                               ));
                         },
                         child: Text("Back To Home",

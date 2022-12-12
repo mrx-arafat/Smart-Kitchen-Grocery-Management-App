@@ -15,7 +15,10 @@ class userActivity extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('Smart Kitchen')),
+          backgroundColor: Color.fromARGB(250, 241, 93, 40),
+          title: Center(
+            child: const Text('Smart Kitchen'),
+          ),
         ),
         body: Column(
           children: [

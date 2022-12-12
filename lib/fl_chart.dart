@@ -1,5 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:groceryapp/pages/home_page.dart';
+import 'package:groceryapp/userProfile.dart';
 
 class LineChartSample2 extends StatefulWidget {
   const LineChartSample2({super.key});
@@ -20,49 +23,70 @@ class _LineChartSample2State extends State<LineChartSample2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Smart Kitchen'),
+        backgroundColor: Color.fromARGB(250, 241, 93, 40),
+        title: Center(
+          child: const Text('Smart Kitchen'),
+        ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(30),
-        child: BarChart(BarChartData(
-            borderData: FlBorderData(
-                border: const Border(
-              top: BorderSide.none,
-              right: BorderSide.none,
-              left: BorderSide(width: 1),
-              bottom: BorderSide(width: 1),
-            )),
-            groupsSpace: 10,
-            barGroups: [
-              BarChartGroupData(x: 1, barRods: [
-                BarChartRodData(
-                    fromY: 0, toY: 10, width: 15, color: Colors.amber),
-              ]),
-              BarChartGroupData(x: 2, barRods: [
-                BarChartRodData(
-                    fromY: 0, toY: 20, width: 15, color: Colors.amber),
-              ]),
-              BarChartGroupData(x: 3, barRods: [
-                BarChartRodData(
-                    fromY: 0, toY: 15, width: 15, color: Colors.amber),
-              ]),
-              BarChartGroupData(x: 4, barRods: [
-                BarChartRodData(
-                    fromY: 0, toY: 30, width: 15, color: Colors.amber),
-              ]),
-              BarChartGroupData(x: 5, barRods: [
-                BarChartRodData(
-                    fromY: 0, toY: 10, width: 15, color: Colors.amber),
-              ]),
-              BarChartGroupData(x: 6, barRods: [
-                BarChartRodData(
-                    fromY: 0, toY: 10, width: 15, color: Colors.amber),
-              ]),
-              BarChartGroupData(x: 7, barRods: [
-                BarChartRodData(
-                    fromY: 0, toY: 10, width: 15, color: Colors.amber),
-              ]),
-            ])),
+      body: ListView(
+        children: <Widget>[
+          Container(
+            child: Column(
+              children: <Widget>[
+                Image.asset("lib/images/bar-graph.png"),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 10),
+                  child: Text("Expenditure On Groceries \nTracking",
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w800,
+                          color: Color.fromARGB(251, 39, 76, 37))),
+                ),
+                Column(
+                  children: [
+                    Image.asset("lib/images/wkbar.png"),
+                    // ignore: prefer_ _ ructors, prefer_const_constructors
+
+                    ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(),
+                              ));
+                        },
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              Color.fromARGB(255, 232, 90, 42)),
+                          textStyle: MaterialStateProperty.all(
+                            GoogleFonts.notoSerif(fontSize: 23),
+                          ),
+                        ),
+                        child: Text('Shop More')),
+
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => UserProfile(),
+                            ));
+                      },
+                      child: Text("Back To Home",
+                          textAlign: TextAlign.center,
+                          overflow: TextOverflow.ellipsis,
+                          style: GoogleFonts.notoSerif(
+                              fontSize: 18,
+                              color: Color.fromARGB(197, 92, 88, 85))),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
