@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:groceryapp/userProfile.dart';
 import 'package:provider/provider.dart';
 import '../components/grocery_item_tile.dart';
 import '../model/cart_model.dart';
@@ -38,16 +39,24 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.only(right: 24.0),
             child: Container(
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Icon(
-                Icons.person,
-                color: Colors.orange,
-              ),
-            ),
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: InkWell(
+                  child: Icon(
+                    Icons.person,
+                    color: Colors.orange,
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => UserProfile(),
+                        ));
+                  },
+                )),
           ),
         ],
       ),
@@ -66,7 +75,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 48),
+          const SizedBox(height: 38),
 
           // good morning bro
           const Padding(
@@ -90,18 +99,18 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
 
-          const SizedBox(height: 24),
+          const SizedBox(height: 20),
 
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.0),
+            padding: EdgeInsets.symmetric(horizontal: 14.0),
             child: Divider(),
           ),
 
-          const SizedBox(height: 24),
+          const SizedBox(height: 14),
 
           // categories -> horizontal listview
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+            padding: const EdgeInsets.symmetric(horizontal: 14.0),
             child: Text(
               "Fresh Items",
               style: GoogleFonts.notoSerif(

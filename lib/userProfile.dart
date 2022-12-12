@@ -47,13 +47,22 @@ class UserProfile extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
-                      CircleAvatar(
-                        backgroundColor: Colors.grey.shade300,
-                        minRadius: 35.0,
-                        child: Icon(
-                          Icons.notification_add,
-                          size: 30.0,
+                      InkWell(
+                        child: CircleAvatar(
+                          backgroundColor: Colors.grey.shade300,
+                          minRadius: 35.0,
+                          child: Icon(
+                            Icons.notification_add,
+                            size: 30.0,
+                          ),
                         ),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => UserNotification(),
+                              ));
+                        },
                       ),
 
                       CircleAvatar(
