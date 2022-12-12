@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:groceryapp/payment.dart';
 import 'package:provider/provider.dart';
-
+import 'package:flutter/material.dart';
 import '../model/cart_model.dart';
 
 class CartPage extends StatelessWidget {
@@ -111,28 +112,50 @@ class CartPage extends StatelessWidget {
                       ),
 
                       // pay now
-                      Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                              color: Color.fromARGB(255, 31, 30, 30)),
-                          borderRadius: BorderRadius.circular(28),
-                        ),
-                        padding: const EdgeInsets.all(12),
-                        child: Row(
-                          children: const [
-                            Text(
-                              'Pay Now',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 30, 30, 30)),
+                      // Container(
+                      //   decoration: BoxDecoration(
+                      //     border: Border.all(
+                      //         color: Color.fromARGB(255, 31, 30, 30)),
+                      //     borderRadius: BorderRadius.circular(28),
+                      //   ),
+                      //   padding: const EdgeInsets.all(12),
+                      //   child: Row(
+                      //     children: const [
+                      //       InkWell(
+                      //         child: Text(
+                      //           'Pay Now',
+                      //           style: TextStyle(
+                      //               color: Color.fromARGB(255, 30, 30, 30)),
+                      //         ),
+
+                      //       ),
+                      //       Icon(
+                      //         Icons.arrow_forward_ios,
+                      //         size: 16,
+                      //         color: Color.fromARGB(255, 33, 32, 32),
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
+
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Payment(),
+                                ));
+                          },
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.grey.shade600),
+                            textStyle: MaterialStateProperty.all(
+                              GoogleFonts.notoSerif(fontSize: 23),
                             ),
-                            Icon(
-                              Icons.arrow_forward_ios,
-                              size: 16,
-                              color: Color.fromARGB(255, 33, 32, 32),
-                            ),
-                          ],
-                        ),
-                      ),
+                          ),
+                          child: Text(
+                            'Pay Now',
+                          ))
                     ],
                   ),
                 ),
