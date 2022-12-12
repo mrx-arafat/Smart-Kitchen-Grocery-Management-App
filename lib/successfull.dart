@@ -5,17 +5,16 @@ import 'package:groceryapp/fl_chart.dart';
 import 'package:groceryapp/homepage.dart';
 import 'package:groceryapp/pages/cart_page.dart';
 import 'package:groceryapp/pages/home_page.dart';
-import 'package:groceryapp/successfull.dart';
 import 'package:groceryapp/userActivity.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:groceryapp/userNotification.dart';
 
 void main() {
-  runApp(const Payment());
+  runApp(const Successfull());
 }
 
-class Payment extends StatelessWidget {
-  const Payment({super.key});
+class Successfull extends StatelessWidget {
+  const Successfull({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -142,7 +141,7 @@ class Payment extends StatelessWidget {
                     },
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
-                      child: Text("Payment",
+                      child: Text("Delivery",
                           textAlign: TextAlign.center,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
@@ -176,20 +175,20 @@ class Payment extends StatelessWidget {
             Container(
               child: Column(
                 children: <Widget>[
-                  Image.asset("lib/images/bkash.png"),
+                  Image.asset("lib/images/success.png"),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 20, 0, 10),
-                    child: Text("Payment Method BKash \nSelected By Default",
+                    child: Text("Payment Successfull!!\n Delivery On Process",
                         textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w800,
-                            color: Color.fromARGB(197, 52, 61, 62))),
+                            color: Color.fromARGB(251, 39, 76, 37))),
                   ),
                   Column(
                     children: [
-                      Image.asset("lib/images/allpay.png"),
+                      Image.asset("lib/images/delivery.jpg"),
                       // ignore: prefer_ _ ructors, prefer_const_constructors
 
                       ElevatedButton(
@@ -197,7 +196,7 @@ class Payment extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => Successfull(),
+                                  builder: (context) => HomePage(),
                                 ));
                           },
                           style: ButtonStyle(
@@ -207,7 +206,7 @@ class Payment extends StatelessWidget {
                               GoogleFonts.notoSerif(fontSize: 23),
                             ),
                           ),
-                          child: Text('Complete Payment')),
+                          child: Text('Shop More')),
 
                       InkWell(
                         onTap: () {
