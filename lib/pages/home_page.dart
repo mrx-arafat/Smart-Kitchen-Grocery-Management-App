@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         title: Text(
-          'Dhake, Bangladesh',
+          'Dhaka, Bangladesh',
           style: TextStyle(
             fontSize: 16,
             color: Colors.grey[700],
@@ -75,15 +75,15 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 38),
+          const SizedBox(height: 20),
 
           // good morning bro
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.0),
-            child: Text(
-              'Good morning,',
-            ),
-          ),
+          // const Padding(
+          //   padding: EdgeInsets.symmetric(horizontal: 24.0),
+          //   child: Text(
+          //     'Good morning,',
+          //   ),
+          // ),
 
           const SizedBox(height: 4),
 
@@ -99,14 +99,14 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
 
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
 
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 14.0),
+            padding: EdgeInsets.symmetric(horizontal: 15.0),
             child: Divider(),
           ),
 
-          const SizedBox(height: 14),
+          const SizedBox(height: 10),
 
           // categories -> horizontal listview
           Padding(

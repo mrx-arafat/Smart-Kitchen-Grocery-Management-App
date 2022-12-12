@@ -32,8 +32,8 @@ class UserProfile extends StatelessWidget {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color.fromARGB(255, 236, 115, 67),
-                    Colors.deepOrange.shade300
+                    Color.fromARGB(255, 229, 79, 19),
+                    Color.fromARGB(255, 218, 92, 53)
                   ],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:groceryapp/signup.dart';
 import 'login.dart';
 import 'signup.dart';
+import 'package:google_fonts/google_fonts.dart';
 //test import
 import 'userActivity.dart';
 
@@ -28,7 +29,7 @@ class HomePageSK extends StatelessWidget {
               child: Text("Welcome To\nSmart Kitchen",
                   textAlign: TextAlign.center,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
+                  style: GoogleFonts.notoSerif(
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
                     color: Color.fromARGB(197, 255, 136, 0),
@@ -45,7 +46,7 @@ class HomePageSK extends StatelessWidget {
                 },
                 style: ButtonStyle(
                   textStyle: MaterialStateProperty.all(
-                    TextStyle(fontSize: 23),
+                    GoogleFonts.notoSerif(fontSize: 23),
                   ),
                 ),
                 child: Text('Login Here')),
@@ -53,7 +54,7 @@ class HomePageSK extends StatelessWidget {
             Text("Don't Have Account?",
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
-                style: TextStyle(
+                style: GoogleFonts.notoSerif(
                     fontSize: 16, color: Color.fromARGB(197, 52, 61, 62))),
 
             InkWell(
@@ -67,7 +68,7 @@ class HomePageSK extends StatelessWidget {
               child: Text("Sign Up",
                   textAlign: TextAlign.center,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
+                  style: GoogleFonts.notoSerif(
                       fontSize: 18, color: Color.fromARGB(197, 255, 136, 0))),
             ),
           ],

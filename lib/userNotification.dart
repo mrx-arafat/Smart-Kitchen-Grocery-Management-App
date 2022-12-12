@@ -113,7 +113,7 @@ class UserNotification extends StatelessWidget {
                           textAlign: TextAlign.center,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
                               fontWeight: FontWeight.w700,
                               color: Color.fromARGB(197, 255, 136, 0))),
                     ),
@@ -128,11 +128,11 @@ class UserNotification extends StatelessWidget {
                     },
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
-                      child: Text("Quantity",
+                      child: Text("Notification",
                           textAlign: TextAlign.center,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
                               fontWeight: FontWeight.w700,
                               color: Color.fromARGB(197, 233, 50, 5))),
                     ),
@@ -151,7 +151,7 @@ class UserNotification extends StatelessWidget {
                           textAlign: TextAlign.center,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 20,
                               fontWeight: FontWeight.w700,
                               color: Color.fromARGB(197, 255, 136, 0))),
                     ),
