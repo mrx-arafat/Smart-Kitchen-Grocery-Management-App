@@ -147,8 +147,8 @@ class CartPage extends StatelessWidget {
                                 ));
                           },
                           style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(Colors.grey.shade600),
+                            backgroundColor: MaterialStateProperty.all(
+                                Color.fromARGB(255, 232, 90, 42)),
                             textStyle: MaterialStateProperty.all(
                               GoogleFonts.notoSerif(fontSize: 23),
                             ),

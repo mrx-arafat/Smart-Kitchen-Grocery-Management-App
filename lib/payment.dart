@@ -3,8 +3,10 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:groceryapp/fl_chart.dart';
 import 'package:groceryapp/homepage.dart';
+import 'package:groceryapp/pages/cart_page.dart';
 import 'package:groceryapp/pages/home_page.dart';
 import 'package:groceryapp/userActivity.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:groceryapp/userNotification.dart';
 
 void main() {
@@ -110,66 +112,17 @@ class Payment extends StatelessWidget {
             Container(
               child: Row(
                 children: <Widget>[
-                  // Expanded(
-                  //   child: Container(
-                  //     color: Colors.deepOrange.shade300,
-                  //     child: ListTile(
-                  //       title: Text(
-                  //         'Activity',
-                  //         textAlign: TextAlign.center,
-                  //         style: TextStyle(
-                  //           fontWeight: FontWeight.bold,
-                  //           fontSize: 30,
-                  //           color: Colors.white,
-                  //         ),
-                  //       ),
-                  //       subtitle: Text(
-                  //         'Monthly',
-                  //         textAlign: TextAlign.center,
-                  //         style: TextStyle(
-                  //           fontSize: 20,
-                  //           color: Colors.white70,
-                  //         ),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
-
-                  // Expanded(
-                  //   child: Container(
-                  //     color: Colors.red,
-                  //     child: ListTile(
-                  //       title: Text(
-                  //         'Shop',
-                  //         textAlign: TextAlign.center,
-                  //         style: TextStyle(
-                  //           fontWeight: FontWeight.bold,
-                  //           fontSize: 30,
-                  //           color: Colors.white,
-                  //         ),
-                  //       ),
-                  //       subtitle: Text(
-                  //         'Groceries',
-                  //         textAlign: TextAlign.center,
-                  //         style: TextStyle(
-                  //           fontSize: 20,
-                  //           color: Colors.white70,
-                  //         ),
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
                   InkWell(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => LineChartSample2(),
+                            builder: (context) => CartPage(),
                           ));
                     },
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
-                      child: Text("Avtivity",
+                      child: Text("Back",
                           textAlign: TextAlign.center,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
@@ -188,7 +141,7 @@ class Payment extends StatelessWidget {
                     },
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
-                      child: Text("Quantity",
+                      child: Text("Payment",
                           textAlign: TextAlign.center,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
@@ -222,9 +175,10 @@ class Payment extends StatelessWidget {
             Container(
               child: Column(
                 children: <Widget>[
+                  Image.asset("lib/images/bkash.png"),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 20, 0, 10),
-                    child: Text("Your Quantity",
+                    child: Text("Payment Method BKash \nSelected By Default",
                         textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
                         style: TextStyle(
@@ -232,56 +186,45 @@ class Payment extends StatelessWidget {
                             fontWeight: FontWeight.w800,
                             color: Color.fromARGB(197, 52, 61, 62))),
                   ),
-                  // ListTile(
-                  //   title: Text(
-                  //     'Potato',
-                  //     style: TextStyle(
-                  //       color: Colors.green,
-                  //       fontSize: 20,
-                  //       fontWeight: FontWeight.bold,
-                  //     ),
-                  //   ),
-                  //   subtitle: Text(
-                  //     '20 KG',
-                  //     style: TextStyle(
-                  //       fontSize: 18,
-                  //     ),
-                  //   ),
-                  // ),
-                  // Divider(),
-                  // ListTile(
-                  //   title: Text(
-                  //     'Onion',
-                  //     style: TextStyle(
-                  //       color: Color.fromARGB(255, 255, 122, 34),
-                  //       fontSize: 20,
-                  //       fontWeight: FontWeight.bold,
-                  //     ),
-                  //   ),
-                  //   subtitle: Text(
-                  //     '10 KG',
-                  //     style: TextStyle(
-                  //       fontSize: 18,
-                  //     ),
-                  //   ),
-                  // ),
-                  // Divider(),
-                  // ListTile(
-                  //   title: Text(
-                  //     'Carrot (Low!)',
-                  //     style: TextStyle(
-                  //       color: Color.fromARGB(255, 243, 10, 6),
-                  //       fontSize: 20,
-                  //       fontWeight: FontWeight.bold,
-                  //     ),
-                  //   ),
-                  //   subtitle: Text(
-                  //     '5 KG',
-                  //     style: TextStyle(
-                  //       fontSize: 18,
-                  //     ),
-                  //   ),
-                  // ),
+                  Column(
+                    children: [
+                      Image.asset("lib/images/allpay.png"),
+                      // ignore: prefer_ _ ructors, prefer_const_constructors
+
+                      ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomePageSK(),
+                                ));
+                          },
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                                Color.fromARGB(255, 232, 90, 42)),
+                            textStyle: MaterialStateProperty.all(
+                              GoogleFonts.notoSerif(fontSize: 23),
+                            ),
+                          ),
+                          child: Text('Complete Payment')),
+
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePageSK(),
+                              ));
+                        },
+                        child: Text("Back To Home",
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            style: GoogleFonts.notoSerif(
+                                fontSize: 18,
+                                color: Color.fromARGB(197, 92, 88, 85))),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             )
