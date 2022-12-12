@@ -20,6 +20,14 @@ class _LineChartSample2State extends State<LineChartSample2> {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
+        AppBar(
+          title: Text("Heey"),
+          backgroundColor: Colors.orange,
+          // elevation: 0,
+          iconTheme: IconThemeData(
+            color: Colors.grey[800],
+          ),
+        ),
         AspectRatio(
           aspectRatio: 1.70,
           child: DecoratedBox(
